@@ -1,10 +1,21 @@
 import React from "react";
-import "./App.css";
+import { Layout } from "./components/Layout";
+// import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>React-Redux-Boilerplate</h1>
+    <div>
+      <Layout>
+        <div
+          style={{
+            width: "100%",
+            textAlign: "center",
+            margin: "20px",
+          }}
+        >
+          <span>Counter Example</span>
+        </div>
+      </Layout>
     </div>
   );
 }

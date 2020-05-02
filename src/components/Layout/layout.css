@@ -1,0 +1,13 @@
+.layout-container {
+  height: 50px;
+}
+
+.layout-content {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 100px);
+  max-height: calc(100% - 100px);
+  overflow-y: scroll;
+}

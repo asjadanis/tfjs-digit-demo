@@ -1,0 +1,15 @@
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  background-color: #222;
+  height: 50px;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: inherit;
+}
