@@ -1,18 +1,12 @@
 import React from "react";
 import { Layout } from "./components/Layout";
-// import "./App.css";
+import "./App.css";
 
 function App() {
   return (
     <div>
       <Layout>
-        <div
-          style={{
-            width: "100%",
-            textAlign: "center",
-            margin: "20px",
-          }}
-        >
+        <div className="main-content">
           <span>Counter Example</span>
         </div>
       </Layout>
