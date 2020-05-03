@@ -9,12 +9,10 @@ function App() {
     <div>
       <Layout>
         <div className="main-content">
-          <BrowserRouter basename="/react-redux-boilerplate">
-            <Switch>
-              <Route exact path={routes.HOME} component={HomePage} />
-              <Route exact path={routes.COUNTER} component={CounterPage} />
-            </Switch>
-          </BrowserRouter>
+          <Switch>
+            <Route exact path={routes.HOME} component={HomePage} />
+            <Route exact path={routes.COUNTER} component={CounterPage} />
+          </Switch>
         </div>
       </Layout>
     </div>
@@ -31,7 +29,11 @@ function HomePage(props) {
 }
 
 function CounterPage(props) {
-  return <div>Counter</div>;
+  return (
+    <div>
+      Counter <Link to={"/"}>Home</Link>
+    </div>
+  );
 }
 
 export default App;
