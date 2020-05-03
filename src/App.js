@@ -1,10 +1,9 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Layout } from "./components/Layout";
-import routes from "./routes/routes.json";
-import { HomePage } from "./pages/Home";
-import { CounterPage } from "./pages/Counter";
+import routes from "./routes/routes.js";
 import "./App.css";
+import { RouteProgress } from "./components/RouteProgress/RouteProgress";
 
 function App() {
   return (
@@ -12,8 +11,9 @@ function App() {
       <Layout>
         <div className="main-content">
           <Switch>
-            <Route exact path={routes.HOME} component={HomePage} />
-            <Route exact path={routes.COUNTER} component={CounterPage} />
+            {routes.map((route, index) => (
+              <RouteProgress key={index} {...route} />
+            ))}
           </Switch>
         </div>
       </Layout>
