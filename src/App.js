@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch } from "react-router-dom";
-import { Layout } from "./components/Layout";
+import Layout from "./components/Layout";
 import routes from "./routes/routes.js";
 import "./App.css";
 import { RouteProgress } from "./components/RouteProgress/RouteProgress";

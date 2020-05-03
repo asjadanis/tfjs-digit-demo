@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./home.css";
 
 const homeText = `Hi my name is Asjad and I created this simplistic react-redux-boilerplate based on create-react-app, 
