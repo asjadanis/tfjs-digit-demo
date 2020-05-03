@@ -4,7 +4,13 @@ import "./footer.css";
 const Footer = (prosp) => (
   <div className="footer-container">
     <div className="footer-content">
-      <span>Github</span>
+      <a
+        target="_blank"
+        href="https://github.com/asjadanis/react-redux-boilerplate"
+        className="link-styles"
+      >
+        Github
+      </a>
     </div>
   </div>
 );

@@ -16,3 +16,8 @@
   color: white;
   height: inherit;
 }
+
+.link-styles {
+  text-decoration: none;
+  color: white;
+}
