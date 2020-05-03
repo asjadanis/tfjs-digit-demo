@@ -1,0 +1,6 @@
+.description {
+  width: inherit;
+  overflow-x: hidden;
+  white-space: pre-line;
+  margin: 2rem;
+}
