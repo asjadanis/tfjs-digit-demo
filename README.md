@@ -6,8 +6,6 @@ A simplistic boilerplate based on create-react-app, pre-configured with [redux](
 
 ## DEMO
 
-https://react-three-boilerplate.herokuapp.com/ <br>
-
 ![Alt Text](https://media.giphy.com/media/Jq8J7NkjsbeV6F2gvl/giphy.gif)
 
 ## To Run locally and experiment
