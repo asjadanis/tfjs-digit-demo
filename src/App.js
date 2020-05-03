@@ -9,7 +9,7 @@ function App() {
     <div>
       <Layout>
         <div className="main-content">
-          <BrowserRouter>
+          <BrowserRouter basename="/react-redux-boilerplate">
             <Switch>
               <Route exact path={routes.HOME} component={HomePage} />
               <Route exact path={routes.COUNTER} component={CounterPage} />
