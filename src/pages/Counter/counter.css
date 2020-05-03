@@ -16,7 +16,7 @@
 }
 
 .decrement {
-  width: 100px;
+  width: 30px;
   border: 1px solid #fd5e53;
   border-radius: 5px;
   user-select: none;
@@ -38,7 +38,7 @@
 }
 
 .increment {
-  width: 100px;
+  width: 30px;
   border: 1px solid #0779e4;
   border-radius: 5px;
   user-select: none;
