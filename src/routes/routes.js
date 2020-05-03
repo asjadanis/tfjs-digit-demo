@@ -1,5 +1,5 @@
-import { HomePage } from "../pages/Home";
-import { CounterPage } from "../pages/Counter";
+import HomePage from "../pages/Home";
+import CounterPage from "../pages/Counter";
 
 const routes = [
   { title: "Home", path: "/", exact: true, component: HomePage },

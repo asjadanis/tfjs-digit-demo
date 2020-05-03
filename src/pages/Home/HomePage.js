@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 
-export const HomePage = (props) => {
+const HomePage = (props) => {
   return (
     <div>
       Home page
@@ -10,3 +10,5 @@ export const HomePage = (props) => {
     </div>
   );
 };
+
+export default HomePage;
