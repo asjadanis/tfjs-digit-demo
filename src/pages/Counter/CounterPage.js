@@ -1,12 +1,12 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import "./counter.css";
 import { incrementCounter, decrementCounter, resetCounter } from "../../actions/Counter";
+import { Link } from "react-router-dom";
 
 const CounterPage = (props) => {
-  const { incrementCounter, decrementCounter, resetCounter, counter } = props;
+  const { incrementCounter, decrementCounter, resetCounter, counter, history } = props;
   return (
     <div className="counter-container">
       <div> A Simple Counter Example </div>
@@ -19,8 +19,13 @@ const CounterPage = (props) => {
           +
         </div>
       </div>
-      <div onClick={(e) => resetCounter()} className="reset">
-        Reset
+      <div style={{ display: "flex", width: "100%", justifyContent: "center " }}>
+        <div onClick={(e) => resetCounter()} className="reset">
+          Reset
+        </div>
+        <Link to="/" className="reset">
+          Home
+        </Link>
       </div>
     </div>
   );

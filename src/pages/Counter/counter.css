@@ -63,6 +63,9 @@
   border: 1px solid dodgerblue;
   border-radius: 5px;
   user-select: none;
+  margin: 1rem;
+  text-decoration: none;
+  color: black;
 }
 
 .reset:hover {
