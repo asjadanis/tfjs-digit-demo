@@ -3,4 +3,11 @@
   overflow-x: hidden;
   white-space: pre-line;
   margin: 2rem;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.example {
+  font-family: monospace;
+  font-size: 18px;
 }

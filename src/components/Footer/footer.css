@@ -4,6 +4,9 @@
   background-color: #222;
   height: 50px;
   width: 100%;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .footer-content {
