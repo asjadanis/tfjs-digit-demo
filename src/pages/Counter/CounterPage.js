@@ -3,11 +3,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./counter.css";
-import {
-  incrementCounter,
-  decrementCounter,
-  resetCounter,
-} from "../../actions/Counter";
+import { incrementCounter, decrementCounter, resetCounter } from "../../actions/Counter";
 
 const CounterPage = (props) => {
   const { incrementCounter, decrementCounter, resetCounter, counter } = props;
@@ -32,15 +28,12 @@ const CounterPage = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    counter: state.counter.counter,
+    counter: state.counter.counter
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators(
-    { incrementCounter, decrementCounter, resetCounter },
-    dispatch
-  );
+  return bindActionCreators({ incrementCounter, decrementCounter, resetCounter }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CounterPage);
