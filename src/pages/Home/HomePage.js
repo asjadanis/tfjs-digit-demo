@@ -17,7 +17,7 @@ const homeText = `Hi my name is Asjad and I created this simplistic react-redux-
                   `;
 
 const exampleLink = `Navigate here to see it in action <br/><br/> `;
-const timeout = 0;
+const timeout = 50;
 
 const HomePage = (props) => {
   const typing = useRef();
