@@ -18,6 +18,6 @@ export default function configureStore(initialState = {}) {
       composeWithDevTools(applyMiddleware(...middlewares))
     );
   } else {
-    return createStore(rootReducer, initialState, applyMiddleware(...middlewares));
+    return createStore(rootReducer(history), initialState, applyMiddleware(...middlewares));
   }
 }
