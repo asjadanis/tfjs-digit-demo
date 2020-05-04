@@ -6,7 +6,7 @@ import { createBrowserHistory } from "history";
 import { routerMiddleware } from "connected-react-router";
 import rootReducer from "../reducers";
 
-export const history = createBrowserHistory();
+export const history = createBrowserHistory({ basename: "react-redux-boilerplate" });
 
 export default function configureStore(initialState = {}) {
   const middlewares = [thunk, routerMiddleware(history)];
@@ -18,10 +18,6 @@ export default function configureStore(initialState = {}) {
       composeWithDevTools(applyMiddleware(...middlewares))
     );
   } else {
-    return createStore(
-      rootReducer,
-      initialState,
-      applyMiddleware(...middlewares)
-    );
+    return createStore(rootReducer, initialState, applyMiddleware(...middlewares));
   }
 }

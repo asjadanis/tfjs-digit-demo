@@ -1,5 +1,6 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./home.css";
+import { Link } from "react-router-dom";
 
 const homeText = `Hi my name is Asjad and I created this simplistic react-redux-boilerplate based on create-react-app, 
                   to quickly get started with React, without going through a bunch of configurations. This boilerplate 
@@ -15,14 +16,14 @@ const homeText = `Hi my name is Asjad and I created this simplistic react-redux-
                   5 - For more details see the project source on github and feel free to experiment and fork the repo.
                   `;
 
-const exampleLink = `Navigate here to see it in action <br/><a href="/counter"> Counter Example </a>`;
-
-let iterator = 0;
-const timeout = 50;
+const exampleLink = `Navigate here to see it in action <br/><br/> `;
+const timeout = 0;
 
 const HomePage = (props) => {
   const typing = useRef();
   const counterLink = useRef();
+  const [shouldShowLink, setShouldShowLink] = useState(false);
+  let [iterator, setIterator] = useState(0);
 
   const typeText = () => {
     if (iterator < homeText.length) {
@@ -32,6 +33,7 @@ const HomePage = (props) => {
     }
     if (iterator >= homeText.length) {
       counterLink.current.innerHTML = exampleLink;
+      setShouldShowLink(true);
     }
   };
 
@@ -42,7 +44,10 @@ const HomePage = (props) => {
   return (
     <div>
       <pre className="description" ref={typing}></pre>
-      <p className="example" ref={counterLink}></p>
+      <div className="example">
+        <p ref={counterLink}></p>
+        {shouldShowLink && <Link to="/counter">Counter Example</Link>}
+      </div>
     </div>
   );
 };
