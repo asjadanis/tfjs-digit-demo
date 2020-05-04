@@ -6,7 +6,7 @@ import { incrementCounter, decrementCounter, resetCounter } from "../../actions/
 import { Link } from "react-router-dom";
 
 const CounterPage = (props) => {
-  const { incrementCounter, decrementCounter, resetCounter, counter, history } = props;
+  const { incrementCounter, decrementCounter, resetCounter, counter } = props;
   return (
     <div className="counter-container">
       <div> A Simple Counter Example </div>
