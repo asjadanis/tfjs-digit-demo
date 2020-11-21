@@ -12,3 +12,10 @@
   font-size: 18px;
   margin: 2rem;
 }
+
+.home-container {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}

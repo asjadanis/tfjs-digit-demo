@@ -1,10 +1,10 @@
 import React  from "react";
-import Styles from "./canvas.css"
+import "./canvas.css"
 
 const DigitCanvas = (props) => {
   return (
     <div>
-      <canvas></canvas>
+      <canvas width={"250px"} height={"250px"} className="canvas-styles"></canvas>
     </div>
   )
 }
