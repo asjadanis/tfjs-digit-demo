@@ -9,6 +9,6 @@ A simplistic boilerplate based on create-react-app, pre-configured with [redux](
 
 ## To Run locally and experiment
 
-git clone https://github.com/asjadanis/react-redux-boilerplate.git <br>
+git clone https://github.com/asjadanis/tfjs-digit-demo.git <br>
 yarn install <br>
 yarn start <br>
