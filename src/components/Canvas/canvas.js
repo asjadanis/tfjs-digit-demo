@@ -9,13 +9,15 @@ const DigitCanvas = (props) => {
 
   const onMouseDown = (e) => {
     const { mouseX, mouseY } = getMousePosition(e);
-    draw(mouseX, mouseY);
     setMouseDown(true);
+    draw(mouseX, mouseY);
   };
 
   const onMouseMove = (e) => {
-    const { mouseX, mouseY } = getMousePosition(e);
-    draw(mouseX, mouseY);
+    if (isMouseDown) {
+      const { mouseX, mouseY } = getMousePosition(e);
+      draw(mouseX, mouseY);
+    }
   };
 
   const onMouseUp = (e) => {
@@ -41,16 +43,23 @@ const DigitCanvas = (props) => {
   };
 
   const draw = (x, y) => {
-    if (canvasContext && isMouseDown) {
+    if (isMouseDown) {
       canvasContext.strokeStyle = "black";
       canvasContext.lineWidth = 10;
       canvasContext.lineJoin = "round";
+      canvasContext.beginPath();
       canvasContext.moveTo(lastPos.x, lastPos.y);
       canvasContext.lineTo(x, y);
       canvasContext.closePath();
       canvasContext.stroke();
     }
     setLastPos({ x, y });
+  };
+
+  const clearCanvas = (e) => {
+    canvasContext.clearRect(0, 0, canvasContext.canvas.width, canvasContext.canvas.height);
+    setMouseDown(false);
+    setLastPos({ x: null, y: null });
   };
 
   useEffect(() => {
@@ -60,7 +69,7 @@ const DigitCanvas = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className="canvas-container">
       <canvas
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
@@ -73,6 +82,8 @@ const DigitCanvas = (props) => {
         height={"250px"}
         className="canvas-styles"
       ></canvas>
+
+      <button onClick={clearCanvas}>Clear</button>
     </div>
   );
 };
