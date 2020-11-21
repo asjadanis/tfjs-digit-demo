@@ -6,7 +6,7 @@ const Footer = (prosp) => (
     <div className="footer-content">
       <a
         target="_blank"
-        href="https://github.com/asjadanis/react-redux-boilerplate"
+        href="https://github.com/asjadanis/tfjs-digit-demo"
         className="link-styles"
       >
         Github
