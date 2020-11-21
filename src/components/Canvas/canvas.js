@@ -45,7 +45,7 @@ const DigitCanvas = (props) => {
 
   const draw = (x, y) => {
     if (isMouseDown) {
-      canvasContext.strokeStyle = "black";
+      canvasContext.strokeStyle = "white";
       canvasContext.lineWidth = 10;
       canvasContext.lineJoin = "round";
       canvasContext.beginPath();
@@ -66,7 +66,8 @@ const DigitCanvas = (props) => {
   const onPredict = (e) => {
     const { predictDigit } = props;
     const processedImage = processCanvasData(canvasRef.current);
-    predictDigit(processedImage);
+    const requestJson = { instances: processedImage };
+    predictDigit(requestJson);
   };
 
   useEffect(() => {
