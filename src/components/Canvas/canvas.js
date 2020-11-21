@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { processCanvasData } from "../../modules/predict";
 import "./canvas.css";
 
 const DigitCanvas = (props) => {
@@ -62,6 +63,12 @@ const DigitCanvas = (props) => {
     setLastPos({ x: null, y: null });
   };
 
+  const onPredict = (e) => {
+    const { predictDigit } = props;
+    const processedImage = processCanvasData(canvasRef.current);
+    predictDigit(processedImage);
+  };
+
   useEffect(() => {
     if (canvasRef) {
       setCanvasContext(canvasRef.current.getContext("2d"));
@@ -85,11 +92,11 @@ const DigitCanvas = (props) => {
         ></canvas>
       </div>
       <div>
-        <button style={{ marginRight: "2rem", width: "4rem" }} onClick={clearCanvas}>
-          Clear
+        <button style={{ width: "4rem", marginRight: "2rem" }} onClick={onPredict}>
+          Predict
         </button>
         <button style={{ width: "4rem" }} onClick={clearCanvas}>
-          Predict
+          Clear
         </button>
       </div>
     </>
