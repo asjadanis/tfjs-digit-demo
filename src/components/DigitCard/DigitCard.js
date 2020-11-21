@@ -1,8 +1,8 @@
 import React from "react";
-import "./digitcard.css"
+import "./digitcard.css";
 
 const DigitCard = (props) => {
-  const {digit} = props;
+  const { digit } = props;
   return (
     <div className="digit-container-styles">
       <div className="digit-card-styles">
@@ -11,7 +11,7 @@ const DigitCard = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DigitCard
+export default DigitCard;
