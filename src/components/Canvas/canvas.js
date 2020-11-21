@@ -85,7 +85,9 @@ const DigitCanvas = (props) => {
         ></canvas>
       </div>
       <div>
-        <button onClick={clearCanvas}>Clear</button>
+        <button style={{ marginRight: "2rem" }} onClick={clearCanvas}>
+          Clear
+        </button>
         <button onClick={clearCanvas}>Predict</button>
       </div>
     </>
