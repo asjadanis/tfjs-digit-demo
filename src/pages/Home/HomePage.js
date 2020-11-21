@@ -1,12 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
+import DigitCanvas from "../../components/Canvas"
 import "./home.css";
-import { Link } from "react-router-dom";
 
 const HomePage = (props) => {
 
   return (
     <div>
       Tensorflow JS Digit Demo
+      <DigitCanvas />
     </div>
   );
 };
