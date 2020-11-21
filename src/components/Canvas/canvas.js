@@ -69,22 +69,26 @@ const DigitCanvas = (props) => {
   }, []);
 
   return (
-    <div className="canvas-container">
-      <canvas
-        onMouseDown={onMouseDown}
-        onMouseMove={onMouseMove}
-        onMouseUp={onMouseUp}
-        onTouchStart={onMouseDown}
-        onTouchEnd={onMouseUp}
-        onTouchMove={onMouseMove}
-        ref={canvasRef}
-        width={"250px"}
-        height={"250px"}
-        className="canvas-styles"
-      ></canvas>
-
-      <button onClick={clearCanvas}>Clear</button>
-    </div>
+    <>
+      <div className="canvas-container">
+        <canvas
+          onMouseDown={onMouseDown}
+          onMouseMove={onMouseMove}
+          onMouseUp={onMouseUp}
+          onTouchStart={onMouseDown}
+          onTouchEnd={onMouseUp}
+          onTouchMove={onMouseMove}
+          ref={canvasRef}
+          width={"250px"}
+          height={"250px"}
+          className="canvas-styles"
+        ></canvas>
+      </div>
+      <div>
+        <button onClick={clearCanvas}>Clear</button>
+        <button onClick={clearCanvas}>Predict</button>
+      </div>
+    </>
   );
 };
 
