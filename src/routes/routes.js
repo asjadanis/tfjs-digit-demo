@@ -1,9 +1,7 @@
 import HomePage from "../pages/Home";
-import CounterPage from "../pages/Counter";
 
 const routes = [
-  { title: "Home", path: "/", exact: true, component: HomePage },
-  { title: "Counter", path: "/counter", exact: true, component: CounterPage },
+  { title: "Home", path: "/", exact: true, component: HomePage }
 ];
 
 export default routes;
