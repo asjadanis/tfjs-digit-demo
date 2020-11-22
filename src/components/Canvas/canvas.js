@@ -66,8 +66,7 @@ const DigitCanvas = (props) => {
   const onPredict = (e) => {
     const { predictDigit } = props;
     const processedImage = processCanvasData(canvasRef.current);
-    const requestJson = { instances: processedImage };
-    predictDigit(requestJson);
+    predictDigit(processedImage);
   };
 
   useEffect(() => {

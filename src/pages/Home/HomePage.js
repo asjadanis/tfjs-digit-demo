@@ -6,18 +6,20 @@ import "./home.css";
 
 const HomePage = (props) => {
   const [mnistModel, setMnistModel] = useState(null);
+  const [predictedResult, setPredictedResult] = useState(null);
 
   const predictDigit = async (data) => {
-    // const predictedDigit = await mnistModel.predict(data).data();
-    // console.log("Predicted Digit: ", predictDigit);
+    const predictedResult = await mnistModel.predict(data).data();
+    const predictedDigit = predictedResult.indexOf(Math.max(...predictedResult));
+    setPredictedResult(predictedDigit);
   };
 
   useEffect(() => {
     async function loadModel() {
-      const model = await tf.loadLayersModel("/models/mnist-tf-js-model.json");
+      const model = await tf.loadLayersModel("http://127.0.0.1:8000/model.json");
       setMnistModel(model);
     }
-    // loadModel();
+    loadModel();
   }, []);
 
   return (
@@ -27,7 +29,7 @@ const HomePage = (props) => {
           <DigitCanvas predictDigit={predictDigit} />
         </div>
         <div style={{ width: "50%", minWidth: "300px" }}>
-          <DigitCard digit={5} />{" "}
+          <DigitCard digit={predictedResult} />
         </div>
       </div>
     </div>
