@@ -16,7 +16,7 @@ const HomePage = (props) => {
 
   useEffect(() => {
     async function loadModel() {
-      const model = await tf.loadLayersModel("http://127.0.0.1:8000/model.json");
+      const model = await tf.loadLayersModel(process.env.REACT_APP_MODEL_URL);
       setMnistModel(model);
     }
     loadModel();
