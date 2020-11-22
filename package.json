@@ -2,7 +2,7 @@
   "name": "tfjs-digit-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://asjadanis.github.io/react-redux-boilerplate",
+  "homepage": "http://asjadanis.github.io/tfjs-digit-demo",
   "dependencies": {
     "@tensorflow/tfjs": "^2.7.0",
     "@testing-library/jest-dom": "^4.2.4",
