@@ -6,7 +6,7 @@ import { createBrowserHistory } from "history";
 import { routerMiddleware } from "connected-react-router";
 import rootReducer from "../reducers";
 
-export const history = createBrowserHistory({ basename: "react-redux-boilerplate" });
+export const history = createBrowserHistory({ basename: "tfjs-digit-demo" });
 
 export default function configureStore(initialState = {}) {
   const middlewares = [thunk, routerMiddleware(history)];
