@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b840db9f205081b5764e9057a3c675db",
+    "revision": "73d544075d64af3ad3c57c8c72b48b43",
     "url": "/tfjs-digit-demo/index.html"
   },
   {
