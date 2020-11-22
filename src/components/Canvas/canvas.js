@@ -10,6 +10,10 @@ const DigitCanvas = (props) => {
 
   const onMouseDown = (e) => {
     const { mouseX, mouseY } = getMousePosition(e);
+    const el = document.getElementsByClassName("layout-content");
+    if (el && el[0]) {
+      el[0].style.overflowY = "hidden";
+    }
     setMouseDown(true);
     draw(mouseX, mouseY);
   };
@@ -23,6 +27,10 @@ const DigitCanvas = (props) => {
 
   const onMouseUp = (e) => {
     setMouseDown(false);
+    const el = document.getElementsByClassName("layout-content");
+    if (el && el[0]) {
+      el[0].style.overflowY = "scroll";
+    }
   };
 
   const getMousePosition = (e) => {
