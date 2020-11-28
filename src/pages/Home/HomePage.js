@@ -14,6 +14,32 @@ const HomePage = (props) => {
     setPredictedResult(predictedDigit);
   };
 
+  const predictFromApi = (data) => {
+    data.array().then((array) => {
+      const body = {
+        instances: array
+      };
+
+      const params = {
+        method: "POST",
+        body: JSON.stringify(body)
+      };
+
+      fetch(process.env.REACT_APP_API_URL, params)
+        .then((res) => res.json())
+        .then((data) => {
+          const predictions = data.predictions && data.predictions[0];
+          if (predictions) {
+            const predictedDigit = predictions.indexOf(Math.max(...predictions));
+            console.log("Predicted result: ", predictedDigit);
+          }
+        })
+        .catch((err) => {
+          console.error("Error: ", err);
+        });
+    });
+  };
+
   useEffect(() => {
     async function loadModel() {
       const model = await tf.loadLayersModel(process.env.REACT_APP_MODEL_URL);
