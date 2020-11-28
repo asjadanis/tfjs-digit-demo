@@ -9,6 +9,8 @@ A client side demo application for single-digit recognition using tensorflow-js 
 
 *This project was bootstrapped with [react-redux-boilerplate](https://github.com/asjadanis/react-redux-boilerplate).*
 
+[Blog Post](https://asjadanis128.medium.com/machine-learning-in-production-3d54860ff1d9)
+
 ## DEMO
 
 ![Alt Text](https://media.giphy.com/media/K8gg7QoXeZ8qxI4dLm/giphy.gif)
